@@ -13,5 +13,4 @@ public class MainController {
 	public String greetings() {
 		return "Greetings from Safety Net!";
 	}
-
 }
