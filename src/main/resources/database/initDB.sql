@@ -55,5 +55,4 @@ insert into firestations(adress,station) values('112 Steppes Pl', '4');
 insert into firestations(adress,station) values('947 E. Rose Dr', '1');
 insert into firestations(adress,station) values('748 Townings Dr', '3');
 insert into firestations(adress,station) values('951 LoneTree Rd', '2');
-
 commit;

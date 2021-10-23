@@ -19,20 +19,16 @@ public class WebConfig {
     public DataSource dataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder
-       // .driverClassName("com.mysql.jdbc.Driver")
         .url("jdbc:mysql://localhost:3306/safetynet")
         .username("root")
         .password("rootroot");
         return dataSourceBuilder.build();
-
-        // jdbc:mysql://localhost:3306/prod","root","rootroot");
     }
 
     @Bean
     public DataSourceInitializer dataSourceInitializer (){
         ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
         resourceDatabasePopulator.addScript(new ClassPathResource("/database/initDB.sql"));
-        //resourceDatabasePopulator.addScript(new ClassPathResource("/database/PopulateDB.sql"));
         DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
         dataSourceInitializer.setDataSource(dataSource());
         dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);

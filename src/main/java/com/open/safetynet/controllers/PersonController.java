@@ -15,6 +15,7 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
+    // TODO: Just for testing purposes, delete later
     @GetMapping("/person/all")
     public List<Person> getAll() {
             return personService.getAll();
