@@ -19,8 +19,8 @@ public class PersonServiceImpl implements PersonService{
     private PersonRepo personRepo;
 
     @Override
-    public List<Person> getAll() {
-        log.info("PersonService.getAll() was executed.");
-        return personRepo.findAll();
+    public List<Person> getAllWithMedicalRecord() {
+        log.info("PersonService.getAllWithMedicalRecord() was called.");
+        return personRepo.getAllWithMedicalRecord();
     }
 }

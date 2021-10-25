@@ -15,6 +15,13 @@
             <AppenderRef ref="ConsoleAppender" />
         </Logger>
 
+        <!-- Hibernate logger tracks SQL requests -->
+        <Logger name="org.hibernate.SQL" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Logger>
+        <Logger name="org.hibernate.type.descriptor.sql" level="trace" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Logger>
         <Root level="info">
             <AppenderRef ref="ConsoleAppender" />
         </Root>
